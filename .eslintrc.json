@@ -5,7 +5,7 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-       "extends": [
+      "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
