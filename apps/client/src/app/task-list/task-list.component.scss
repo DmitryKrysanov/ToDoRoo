@@ -1,0 +1,31 @@
+@import '../shared/constants/style.scss';
+
+.task-list {
+  position: relative;
+
+  &__loader {
+    position: sticky;
+    top: 7rem;
+
+    height: 0.25rem;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    padding-top: 1rem;
+  }
+
+  &__list {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  &__empty-state {
+    font-size: 0.875rem;
+    color: $disabled-font;
+    text-align: center;
+  }
+}

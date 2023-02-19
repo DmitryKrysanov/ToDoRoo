@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'app/shared/constants/style.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+
+  color: $hight-font;
+  background-color: $main-bg;
+
+  @media screen and (max-width: 1280) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,16 @@
+<form
+  class="form"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  [ngClass]="{ 'form--active': form.valid }"
+>
+  <input
+    class="form__input"
+    type="text"
+    formControlName="title"
+    placeholder="Write a new task"
+  />
+  <button class="form__button" type="submit" [disabled]="form.invalid">
+    Add Task
+  </button>
+</form>

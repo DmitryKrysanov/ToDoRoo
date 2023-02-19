@@ -1,0 +1,20 @@
+<div class="task-list">
+  <div class="task-list__loader">
+    <todo-app-loader *ngIf="isLoading"></todo-app-loader>
+  </div>
+
+  <div class="task-list__content">
+    <div class="task-list__list" *ngIf="tasks?.length; else emptyState">
+      <todo-app-task-list-item
+        *ngFor="let task of tasks"
+        [task]="task"
+        (delete)="onDelete($event)"
+        (edit)="onEdit($event)"
+      ></todo-app-task-list-item>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyState>
+  <p class="task-list__empty-state">No tasks yet. Add one!</p>
+</ng-template>
