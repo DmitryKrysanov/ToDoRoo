@@ -1,0 +1,76 @@
+@import '../shared/constants/style.scss';
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  padding: 1rem;
+  background-color: $inactive-bg;
+  border-radius: 1rem;
+  box-shadow: $main-shodow;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $inactive-bg-hover;
+  }
+
+  &:focus-within {
+    background-color: $active-bg;
+  }
+
+  &--active {
+    background-color: $active-bg;
+
+    &:hover {
+      background-color: $active-bg;
+    }
+  }
+
+  &__input {
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border: none;
+
+    height: 2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    transition: all 0.2s ease-in-out;
+
+    &:not(:disabled) {
+      background-color: $action-bg;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: $action-bg-hover;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+
+    todo-app-loader {
+      margin-right: 0.5rem;
+    }
+  }
+}

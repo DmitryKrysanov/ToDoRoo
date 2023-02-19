@@ -1,0 +1,72 @@
+@import './shared/constants/style.scss';
+
+.main {
+  display: flex;
+  justify-content: center;
+
+  max-width: 640px;
+  margin: 0 auto;
+
+  padding: 4rem 1rem;
+
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: fixed;
+    height: 100px;
+
+    right: 0;
+    left: 0;
+
+    background: $main-bg;
+  }
+
+  &::before {
+    top: 0;
+    z-index: 50;
+
+    background: linear-gradient(
+      0deg,
+      rgba($main-bg, 0) 0%,
+      rgba($main-bg, 1) 100%
+    );
+  }
+
+  &::after {
+    bottom: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba($main-bg, 0) 0%,
+      rgba($main-bg, 1) 100%
+    );
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    todo-app-add-todo,
+    todo-app-task-list {
+      width: 100%;
+    }
+
+    todo-app-add-todo {
+      margin-bottom: 1rem;
+
+      position: sticky;
+      top: 2rem;
+      z-index: 100;
+    }
+  }
+
+  &__title {
+    font-family: 'Gloock', serif;
+    margin-bottom: 2rem;
+  }
+}

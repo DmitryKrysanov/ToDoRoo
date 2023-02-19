@@ -1,0 +1,49 @@
+@import '../../constants/style.scss';
+
+.loader {
+  display: block;
+  position: relative;
+  height: 0.25rem;
+  width: 4rem;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 0.5rem auto;
+  background-position: 0 0, 1rem 0, 2rem 0, 3rem 0;
+  animation: pgfill 1s linear infinite;
+}
+@keyframes pgfill {
+  0% {
+    background-image: linear-gradient(#fff 0.5rem, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  25% {
+    background-image: linear-gradient($accent-color 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  50% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient($accent-color 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  75% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient($accent-color 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  100% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient($accent-color 20px, transparent 0);
+  }
+}

@@ -1,1 +1,13 @@
-App works
+<main class="main">
+  <div class="main__content">
+    <h1 class="main__title">Todo App</h1>
+    <todo-app-add-todo (title)="add($event)"></todo-app-add-todo>
+
+    <todo-app-task-list
+      [tasks]="tasks$ | async"
+      [isLoading]="isLoading$ | async"
+      (edit)="edit($event)"
+      (delete)="delete($event)"
+    ></todo-app-task-list>
+  </div>
+</main>
