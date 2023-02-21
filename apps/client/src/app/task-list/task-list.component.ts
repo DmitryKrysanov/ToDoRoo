@@ -12,8 +12,8 @@ import { LoaderComponent } from '../shared/components/loader/loader.component';
   imports: [CommonModule, LoaderComponent, TaskListItemComponent],
 })
 export class TaskListComponent {
-  @Input() public tasks!: Task[] | null;
-  @Input() public isLoading!: boolean | null;
+  @Input() public tasks!: Task[];
+  @Input() public isLoading!: boolean;
   @Output() public readonly edit: EventEmitter<Task> = new EventEmitter<Task>();
   @Output() public readonly delete: EventEmitter<Task> =
     new EventEmitter<Task>();
@@ -24,5 +24,9 @@ export class TaskListComponent {
 
   public onDelete(task: Task) {
     this.delete.emit(task);
+  }
+
+  public trackByFn(_: number, item: Task) {
+    return item.id;
   }
 }

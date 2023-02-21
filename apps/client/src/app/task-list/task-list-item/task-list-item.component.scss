@@ -72,6 +72,7 @@
 
     &:focus {
       outline-color: $accent-color;
+      background-color: $action-bg-hover;
     }
   }
 
@@ -99,6 +100,7 @@
 
     &:focus {
       outline-color: $accent-color;
+      opacity: 1;
     }
   }
 

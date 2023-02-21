@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
-  FormControl,
-  FormGroup,
   FormsModule,
   ReactiveFormsModule,
   Validators,
@@ -16,25 +14,22 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { LoaderComponent } from '../shared/components/loader/loader.component';
-
-type AddTodoForm = FormGroup<{
-  title: FormControl<string>;
-}>;
+import { AddTaskForm } from '../../models/add-task-form.model';
 
 @Component({
-  selector: 'todo-app-add-todo',
-  templateUrl: './add-todo.component.html',
-  styleUrls: ['./add-todo.component.scss'],
+  selector: 'todo-app-add-task',
+  templateUrl: './add-task.component.html',
+  styleUrls: ['./add-task.component.scss'],
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule, LoaderComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AddTodoComponent implements OnInit {
+export class AddTaskComponent implements OnInit {
   @Output() public title: EventEmitter<string> = new EventEmitter<string>();
 
   private readonly fb: FormBuilder = inject(FormBuilder);
 
-  public form!: AddTodoForm;
+  public form: AddTaskForm;
 
   public ngOnInit(): void {
     this.initForm();

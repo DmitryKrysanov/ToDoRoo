@@ -17,7 +17,7 @@ import { Task } from '../../../models/task.model';
   imports: [CommonModule],
 })
 export class TaskListItemComponent {
-  @Input() public task!: Task;
+  @Input() public task: Task;
   @Output() public edit: EventEmitter<Task> = new EventEmitter<Task>();
   @Output() public delete: EventEmitter<Task> = new EventEmitter<Task>();
 

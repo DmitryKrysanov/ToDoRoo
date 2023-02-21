@@ -13,7 +13,7 @@ import {
   switchMap,
   BehaviorSubject,
 } from 'rxjs';
-import { AddTodoComponent } from './add-todo/add-todo.component';
+import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskService } from '../services/task.service';
 import { TaskListComponent } from './task-list/task-list.component';
 import { Task } from '../models/task.model';
@@ -21,7 +21,7 @@ import { isLoading } from './shared/operators/is-loading.operator';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, AddTodoComponent, TaskListComponent],
+  imports: [CommonModule, AddTaskComponent, TaskListComponent],
   selector: 'todo-app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

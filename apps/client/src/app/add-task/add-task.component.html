@@ -10,7 +10,13 @@
     formControlName="title"
     placeholder="Write a new task"
   />
-  <button class="form__button" type="submit" [disabled]="form.invalid">
+
+  <button
+    class="form__button"
+    type="submit"
+    [disabled]="form.invalid"
+    aria-label="Add Task"
+  >
     Add Task
   </button>
 </form>

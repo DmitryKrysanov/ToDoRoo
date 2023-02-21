@@ -1,7 +1,7 @@
 <main class="main">
   <div class="main__content">
-    <h1 class="main__title">Todo App</h1>
-    <todo-app-add-todo (title)="add($event)"></todo-app-add-todo>
+    <h1 class="main__title">ToDoRoo App</h1>
+    <todo-app-add-task (title)="add($event)"></todo-app-add-task>
 
     <todo-app-task-list
       [tasks]="tasks$ | async"

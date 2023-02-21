@@ -51,12 +51,12 @@
     flex-direction: column;
     align-items: center;
 
-    todo-app-add-todo,
+    todo-app-add-task,
     todo-app-task-list {
       width: 100%;
     }
 
-    todo-app-add-todo {
+    todo-app-add-task {
       margin-bottom: 1rem;
 
       position: sticky;

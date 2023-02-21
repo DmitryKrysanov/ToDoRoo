@@ -6,7 +6,7 @@
   <div class="task-list__content">
     <div class="task-list__list" *ngIf="tasks?.length; else emptyState">
       <todo-app-task-list-item
-        *ngFor="let task of tasks"
+        *ngFor="let task of tasks; trackBy: trackByFn"
         [task]="task"
         (delete)="onDelete($event)"
         (edit)="onEdit($event)"

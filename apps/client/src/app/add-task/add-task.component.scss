@@ -69,6 +69,10 @@
       cursor: default;
     }
 
+    &:focus {
+      outline-color: $accent-color;
+    }
+
     todo-app-loader {
       margin-right: 0.5rem;
     }
